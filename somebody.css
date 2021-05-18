@@ -410,9 +410,9 @@ video{
         height: 350px;
         background: #ECECEC;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        left: 25%;
+        top: 25%;
+        transform: translate(-25%, -25%);
         font-size: 12pt;
         border-radius: 10px;
         border: 1px solid #C6C6C6;
