@@ -70,7 +70,7 @@
 				</div>
 				<div class="mybody">
 					<div class="mytitle">
-						Aku sejak lama suka padamu.
+						Aku sudah sejak lama suka padamu.
 					</div>
 					<div class="mycontent">
 						Maukah kau menjadi orang yang selalu ada disisiku, yang selalu ada disaat senang ataupun susah, yang selalu ada sampai akhir hayatku?
@@ -201,7 +201,7 @@ function move(){
 	}
 }
 function move2(){
-	kali=50;
+	kali=40;
 	addanimation();
 	random1=(mywindow.offsetTop+(Math.floor(Math.random() * 10)-5)*kali);
 	random2=(mywindow.offsetLeft+(Math.floor(Math.random() * 10)-5)*kali);
@@ -213,11 +213,13 @@ function move2(){
 	mywindow.style.top  = random1 + 'px';
 	mywindow.style.left = random2 + 'px';
 	if(random1<0 || ((random1+mywindow.clientHeight)>window.innerHeight)){
-		mywindow.style.top = "calc(50% - "+mywindow.clientHeight/2+"px)";
+		mywindow.style.top = "calc(90% - "+mywindow.clientHeight/2+"px)";
 	}
 	if(random2<0  || ((random2+mywindow.clientWidth)>window.innerWidth)){
-		mywindow.style.left = "calc(50% - "+mywindow.clientWidth/2+"px)";
+		mywindow.style.left = "calc(100% - "+mywindow.clientWidth/2+"px)";
 	}
+	console.log(random1);
+	console.log(random2);
 }
 function addanimation(){
 	var element = document.getElementById("mywindow");
@@ -392,8 +394,9 @@ function startTime(){
 		else if(h>17)tulis('petang','selamat menikmati senja');
 		else if(h>14)tulis('sore','selamat menjalani hari');
 		else if(h>13)tulis('siang','tetap semangat')
-		else if(h>9)tulis('siang','selamat bekerja')
-		else if(h>4)tulis('pagi','selamat beraktivitas');
+		else if(h>9)tulis('siang','selamat beraktivitas')
+		else if(h>6)tulis('pagi','jangan lupa sarapan')
+		else if(h>4)tulis('pagi','sholat subuh jangan lupa');
 		else tulis('malam','seharusnya kamu sudah tidur');
 		if(h>18)     document.querySelector('img').src="wp1.png";
 		else if(h>4) document.querySelector('img').src="wp2.png";
